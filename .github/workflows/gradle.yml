@@ -40,26 +40,26 @@ jobs:
 #    - name: Build with Gradle
 #      run: ./gradlew build
 
-    - name: login to Docker
-      run: |
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+#    - name: login to Docker
+#      run: |
+#        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+#
+#    - name: build Docker image
+#      run: |
+#        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest .
+#
+#    - name: Push Docker image
+#      run: |
+#        docker push docker.io/bekesh/cinema-room-github-action:latest
+##        docker push bekesh/cinema-room-github-action:tagname
 
-    - name: build Docker image
-      run: |
-        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest .
 
-    - name: Push Docker image
-      run: |
-        docker push docker.io/bekesh/cinema-room-github-action:latest
-#        docker push bekesh/cinema-room-github-action:tagname
-
-
-#    - name: Build & push Docker image
-#      uses: mr-smithers-excellent/docker-build-push@v6
-#      with:
-#        image: bekesh/cinema-room-github-action
-#        tags: latest
-#        registry: docker.io
-#        dockerfile: Dockerfile
-#        username: ${{ secrets.DOCKER_USERNAME }}
-#        password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: bekesh/cinema-room-github-action
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
