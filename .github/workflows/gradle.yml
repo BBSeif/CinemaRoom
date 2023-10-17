@@ -34,20 +34,20 @@ jobs:
       with:
         arguments: build
 
-    - name: Build with Gradle
-      run: ./gradlew build
-
-    - name: login to Docker
-      run:
-
-    - name: build Docker image
-      run:
+#    - name: Build with Gradle
+#      run: ./gradlew build
+#
+#    - name: login to Docker
+#      run:
+#
+#    - name: build Docker image
+#      run:
 
     - name: Build with Gradle
       run: ./gradlew build
 
     - name: Build & push Docker image
-      run: mr-smithers-excellent/docker-build-push@v6
+      uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: bekesh/cinema-room-github-action
         tags: latest
