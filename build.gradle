@@ -36,10 +36,10 @@ tasks.named('test') {
 //	baseImage 'openjdk:17'
 //
 //	// Define the entry point for your application
-//	entryPoint = ['java', '-jar', 'cinema-room-github-action.jar']
+//	entryPoint = ['java', '-jar', 'CinemaSeats-0.0.1-SNAPSHOT.jar']
 //
 //	// Copy your application's JAR file into the image
-//	files bootJar.archivePath, 'cinema-room-github-action.jar'
+//	files bootJar.archivePath, 'CinemaSeats-0.0.1-SNAPSHOT.jar'
 //
 //	// Expose ports if needed
 //	ports '8080:8080'

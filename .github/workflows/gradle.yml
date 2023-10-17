@@ -40,19 +40,19 @@ jobs:
 #    - name: Build with Gradle
 #      run: ./gradlew build
 
-#    - name: login to Docker
-#      run: |
-#        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-#
-#    - name: build Docker image
-#      run: |
-#        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest .
-##        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest.
-#
-#    - name: Push Docker image
-#      run: |
-#        docker push bekesh/cinema-room-github-action:firstAction
-##      docker push docker.io/bekesh/cinema-room-github-action:latest
+    - name: login to Docker
+      run: |
+        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: build Docker image
+      run: |
+        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest .
+#        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest.
+
+    - name: Push Docker image
+      run: |
+        docker push bekesh/cinema-room-github-action:firstAction
+#      docker push docker.io/bekesh/cinema-room-github-action:latest
 
 
 #    - name: Build & push Docker image
@@ -66,11 +66,4 @@ jobs:
 #        password: ${{ secrets.DOCKER_PASSWORD }}
 
 
-#    - name: run docker push
-#      run: |
-#        @docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-#        @docker push $BUILD_TAG
-#        @docker push $LATEST_TAG
-#      env:
-#        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-#        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
