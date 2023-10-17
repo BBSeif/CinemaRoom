@@ -46,7 +46,7 @@ jobs:
 
     - name: build Docker image
       run: |
-        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest
+        docker build -f Dockerfile -t docker.io/bekesh/cinema-room-github-action:latest.
 
     - name: Push Docker image
       run: |
