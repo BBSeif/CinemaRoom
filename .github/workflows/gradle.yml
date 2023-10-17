@@ -37,8 +37,8 @@ jobs:
 #    - name: Build with Gradle
 #      run: ./gradlew build
 #
-    - name: Build with Gradle
-      run: ./gradlew build
+#    - name: Build with Gradle
+#      run: ./gradlew build
 
     - name: login to Docker
       run: |
@@ -50,7 +50,8 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push docker.io/bekesh/cinema-room-github-action:latest
+        docker push bekesh/cinema-room-github-action:latest
+#        docker push bekesh/cinema-room-github-action:tagname
 
 
 #    - name: Build & push Docker image
