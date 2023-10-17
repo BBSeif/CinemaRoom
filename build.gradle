@@ -25,6 +25,7 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-//jar {
-//	archiveName = 'cinema-room-github-action.jar'
-//}
+
+plugins {
+	id 'com.bmuschko.docker-remote-api' version '3.2.8'
+}
