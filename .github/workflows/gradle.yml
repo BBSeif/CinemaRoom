@@ -50,8 +50,8 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push docker.io/bekesh/cinema-room-github-action:latest
-#        docker push bekesh/cinema-room-github-action:tagname
+        docker push bekesh/cinema-room-github-action:firstAction
+#      docker push docker.io/bekesh/cinema-room-github-action:latest
 
 
 #    - name: Build & push Docker image
