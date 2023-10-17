@@ -66,11 +66,11 @@ jobs:
 #        password: ${{ secrets.DOCKER_PASSWORD }}
 
 
-    - name: run docker push
-      run: |
-        @docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        @docker push $BUILD_TAG
-        @docker push $LATEST_TAG
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+#    - name: run docker push
+#      run: |
+#        @docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+#        @docker push $BUILD_TAG
+#        @docker push $LATEST_TAG
+#      env:
+#        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+#        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
